@@ -1,0 +1,292 @@
+@import "reset-css";
+@import "mixins.scss";
+@import "variables.scss";
+@import "grid.scss";
+
+@import "../../node_modules/govuk-frontend/all.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Sans:700');
+
+* {
+  box-sizing: border-box;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom styles */
+html {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  background: white;
+  line-height: 1.5;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: .5em;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+/* Links */
+a {
+  &, &:visited {
+    color: $primary-color;
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+a.back-button {
+  @include arrow(left, $black, 7px);
+  color: $black;
+  display: block;
+  margin-bottom: 2em;
+}
+
+/* Paragraphs etc */
+p {
+  margin-bottom: 1em;
+}
+
+ul, ol {
+  list-style-type: disc;
+  margin-left: 1em;
+  margin-top: .25em;
+  li {
+    margin: .25em 0;
+  }
+}
+
+/* Header and elements */
+header {
+  border-bottom: 2px solid $primary-color;
+  padding: 1em 0;
+}
+
+footer {
+  background: $grey-light;
+  padding: 1em 0;
+}
+
+// Example with main using 8 columns and aside using 4 columns
+main {
+  padding: 2em 0;
+}
+
+aside {
+  margin-right: gutter();
+  padding: 2em 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  th {
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: $primary-color;
+    color: $white;
+    &:hover, &:focus {
+      background-color: darken($primary-color, 20%);
+    }
+  }
+  td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+}
+
+.record-totals {
+  background: $black;
+  color: $white;
+  margin: 1em 0;
+  padding: .5em;
+}
+
+/* Loader */
+.loader {
+  animation: spin 0.8s linear infinite;
+  border: 5px solid $grey-light; /* Light grey */
+  border-top: 5px solid $primary-color; /* Blue */
+  border-radius: 50%;
+  height: 50px;
+  margin: 20px auto;
+  width: 50px;
+}
+
+/* Iconography */
+.right-icon {
+  float: right;
+  margin: .25em 0 0 0;
+}
+
+/* Charts */
+.dashboard {
+  border-top: 1px solid $grey-light;
+  margin: 2em 0 3em;
+  padding: 1em 0;
+}
+
+.chart-container {
+  margin: 2em 0;
+}
+
+/* Search results */
+.filters {
+  margin: 1em 0;
+}
+
+.filter-container {
+  border-bottom: 1px solid black;
+  float: left;
+  margin: 0 .25em 0 0;
+  width: 20%;
+}
+
+.category-title {
+  font-weight: 600;
+  margin-bottom: .25em;
+  display: block;
+}
+
+.filter-container {
+  .filter-dropdown {
+    display: none;
+    background: $white;
+    border: 1px solid $grey-light;
+    max-width: 800px;
+    max-height: 400px;
+    overflow: scroll;
+    padding: 1em;
+    position: absolute;
+    z-index: 100;
+
+    -webkit-box-shadow: 0px 0px 20px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 20px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px -6px rgba(0,0,0,0.75);
+  
+    .close {
+      cursor: pointer;
+      font-size: 2em;
+      position: absolute;
+      right: 1rem;
+      top: .5rem;
+    }
+  }
+
+  &:hover {
+    .filter-dropdown {
+      display: block;
+    }
+  }
+}
+
+.filter-category-wrapper {
+  .filter-item-wrapper {
+    max-width: 85%;
+    fieldset {
+      color: $grey-dark;
+      float: left;
+      margin: .25em 0;
+      width: 50%;
+    }
+  }
+  padding: .5em 0;
+}
+
+/* Keyword Search */
+.filter-keyword {
+  margin-bottom: 1em;
+}
+
+.keyword-search {
+  background-color: $white;
+  background-image: none;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba($black, 0.075);
+  color: $grey-dark;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.4;
+  height: 34px;
+  margin-right: 1em ;
+  padding: .5em .75em;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  min-width: 22em;
+  max-width: 25em;
+}
+
+fieldset.searchby-filter {
+  display: inline-block;
+  input {
+    margin: .5em .5em 0 1em;
+  }
+}
+
+/* Pagination */
+.pagination {
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0.5em 0 1em;
+  padding-left: 0;
+  li {
+    display: inline;
+  }
+  a {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #337ab7;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+  }
+  .active {
+    a, a:focus, a:hover, span, span:focus, span:hover {
+      color: #fff;
+      background-color: #337ab7;
+      border-color: #337ab7;
+      cursor: default;
+      z-index: 3;
+    }
+  }
+}

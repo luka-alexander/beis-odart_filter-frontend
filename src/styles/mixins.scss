@@ -1,0 +1,82 @@
+// Create breakpoints quickly
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 50.375em) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 65em) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 80.5em) {
+      @content;
+    }
+  }
+}
+
+// Clearfix for components
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Box sizing
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+// Center items
+@mixin center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Position absolutely in shorthand
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+// Arrow for use in back button etc
+@mixin arrow($direction, $color, $size){
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 0;
+    width: 0;
+    @if $direction == 'top' {
+      border-left: ($size - 2) solid transparent;
+      border-right: ($size - 2) solid transparent;
+      border-bottom: $size solid $color;
+      margin-bottom: 5px;
+    } @else if $direction == 'right' {
+      border-top: ($size - 2) solid transparent;
+      border-bottom: ($size - 2) solid transparent;
+      border-left: $size solid $color;
+      margin-left: 5px;
+    } @else if $direction == 'bottom' {
+      border-top: $size solid $color;
+      border-right: ($size - 2) solid transparent;
+      border-left: ($size - 2) solid transparent;
+      margin-top: 5px;
+    } @else if $direction == 'left' {
+      border-top: ($size - 2) solid transparent;
+      border-right: $size solid $color;
+      border-bottom: ($size - 2) solid transparent;
+      margin-right: 5px;
+    }
+  }
+}

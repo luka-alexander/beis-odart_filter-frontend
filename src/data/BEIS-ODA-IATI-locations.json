@@ -1,0 +1,235 @@
+[
+  { 
+    "region": "Central Asia, regional",
+    "regionCode": "619",
+    "countries": [
+      { "country": "Tajikistan", "countryCode": "TJ" }
+    ]
+  },
+  { 
+    "region": "Africa, Regional",
+    "regionCode": "298",
+    "countries": [
+      { "country": "Mayotte", "countryCode": "YT" }
+    ]
+  },
+  { 
+    "region": "America, regional",
+    "regionCode": "498",
+    "countries": [
+      { "country": "Greenland", "countryCode": "GL" },
+      { "country": "Guadeloupe", "countryCode": "GP" },
+      { "country": "Turks And Caicos Islands (The)", "countryCode": "TC" }
+    ]
+  },
+  { 
+    "region": "Asia, regional",
+    "regionCode": "798",
+    "countries": [
+      { "country": "Armenia", "countryCode": "AM" },
+      { "country": "Azerbaijan", "countryCode": "AZ" },
+      { "country": "Brunei Darussalam", "countryCode": "BN" },
+      { "country": "Christmas Island", "countryCode": "CX" },
+      { "country": "Korea (Democratic People’s Republic Of)", "countryCode": "KP" },
+      { "country": "Korea (Republic Of)", "countryCode": "KR" },
+      { "country": "Macao", "countryCode": "MO" },
+      { "country": "Pakistan", "countryCode": "PK" },
+      { "country": "Russian Federation (The)", "countryCode": "RU" }
+    ]
+  },
+  { 
+    "region": "Central Asia, regional",
+    "regionCode": "619",
+    "countries": [
+      { "country": "Kazakhstan", "countryCode": "KZ" },
+      { "country": "Kyrgyzstan", "countryCode": "KG" },
+      { "country": "Turkmenistan", "countryCode": "TM" }
+    ]
+  },
+  { 
+    "region": "Europe, regional",
+    "regionCode": "89",
+    "countries": [
+      { "country": "Andorra", "countryCode": "AD" },
+      { "country": "Austria", "countryCode": "AT" },
+      { "country": "Belarus", "countryCode": "BY" },
+      { "country": "Belgium", "countryCode": "BE" },
+      { "country": "Bosnia And Herzegovina", "countryCode": "BA" },
+      { "country": "Cyprus", "countryCode": "CY" },
+      { "country": "Czech Republic (The)", "countryCode": "CZ" },
+      { "country": "Denmark", "countryCode": "DK" },
+      { "country": "Germany", "countryCode": "DE" },
+      { "country": "Holy See (The)", "countryCode": "VA" },
+      { "country": "Iceland", "countryCode": "IS" },
+      { "country": "Isle Of Man", "countryCode": "IM" },
+      { "country": "Italy", "countryCode": "IT" },
+      { "country": "Latvia", "countryCode": "LV" },
+      { "country": "Luxembourg", "countryCode": "LU" },
+      { "country": "Moldova (Republic Of)", "countryCode": "MD" },
+      { "country": "Monaco", "countryCode": "MC" },
+      { "country": "Montenegro", "countryCode": "ME" },
+      { "country": "Netherlands (The)", "countryCode": "NL" },
+      { "country": "Portugal", "countryCode": "PT" },
+      { "country": "Slovakia", "countryCode": "SK" },
+      { "country": "Spain", "countryCode": "ES" },
+      { "country": "Sweden", "countryCode": "SE" },
+      { "country": "Switzerland", "countryCode": "CH" }
+    ]
+  },
+  { 
+    "region": "Far East Asia, regional",
+    "regionCode": "790",
+    "countries": [
+      { "country": "Cambodia", "countryCode": "KH" },
+      { "country": "Indonesia", "countryCode": "ID" },
+      { "country": "Malaysia", "countryCode": "MY" },
+      { "country": "Myanmar", "countryCode": "MM" },
+      { "country": "Singapore", "countryCode": "SG" },
+      { "country": "Taiwan (Province Of China)", "countryCode": "TW" },
+      { "country": "Viet Nam", "countryCode": "VN" }
+    ]
+  },
+  { 
+    "region": "Middle East, regional",
+    "regionCode": "589",
+    "countries": [
+      { "country": "Bahrain", "countryCode": "BH" },
+      { "country": "Egypt", "countryCode": "EG" },
+      { "country": "Israel", "countryCode": "IL" },
+      { "country": "Kuwait", "countryCode": "KW" },
+      { "country": "Oman", "countryCode": "OM" },
+      { "country": "Qatar", "countryCode": "QA" },
+      { "country": "Saudi Arabia", "countryCode": "SA" },
+      { "country": "Syrian Arab Republic", "countryCode": "SY" },
+      { "country": "Turkey", "countryCode": "TR" },
+      { "country": "Yemen", "countryCode": "YE" }
+    ]
+  },
+  { 
+    "region": "North & Central America, regional",
+    "regionCode": "389",
+    "countries": [
+      { "country": "Costa Rica", "countryCode": "CR" },
+      { "country": "El Salvador", "countryCode": "SV" },
+      { "country": "Guatemala", "countryCode": "GT" },
+      { "country": "Nicaragua", "countryCode": "NI" },
+      { "country": "Panama", "countryCode": "PA" }
+    ]
+  },
+  { 
+    "region": "North of Sahara, regional",
+    "regionCode": "189",
+    "countries": [
+      { "country": "Libyan Arab Jamahiriya", "countryCode": "LY" },
+      { "country": "Tunisia", "countryCode": "TN" }    
+    ]
+  },
+  { 
+    "region": "Oceania, regional",
+    "regionCode": "889",
+    "countries": [
+      { "country": "Australia", "countryCode": "AU" },
+      { "country": "Cook Islands (The)", "countryCode": "CK" },
+      { "country": "Micronesia (Federated States Of)", "countryCode": "FM" },
+      { "country": "New Caledonia", "countryCode": "NC" },
+      { "country": "New Zealand", "countryCode": "NZ" },
+      { "country": "Niue", "countryCode": "NU" },
+      { "country": "Samoa", "countryCode": "WS" },
+      { "country": "Tokelau", "countryCode": "TK" },
+      { "country": "Tuvalu", "countryCode": "TV" },
+      { "country": "Wallis And Futuna", "countryCode": "WF" }
+    ]
+  },
+  { 
+    "region": "South America, regional",
+    "regionCode": "489",
+    "countries": [
+      { "country": "Argentina", "countryCode": "AR" },
+      { "country": "Bolivia (Plurinational State Of)", "countryCode": "BO" },
+      { "country": "Brazil", "countryCode": "BR" },
+      { "country": "Colombia", "countryCode": "CO" },
+      { "country": "Uruguay", "countryCode": "UY" },
+      { "country": "Venezuela (Bolivarian Republic Of)", "countryCode": "VE" }    
+    ]
+  },
+  { 
+    "region": "South Asia, regional",
+    "regionCode": "679",
+    "countries": [
+      { "country": "Afghanistan", "countryCode": "AF" },
+      { "country": "Maldives", "countryCode": "MV" },
+      { "country": "Nepal", "countryCode": "NP" },
+      { "country": "Sri Lanka", "countryCode": "LK" }
+    ]
+  },
+  { 
+    "region": "South of Sahara, regional",
+    "regionCode": "289",
+    "countries": [
+      { "country": "Botswana", "countryCode": "BW" },
+      { "country": "Burkina Faso", "countryCode": "BF" },
+      { "country": "Cameroon", "countryCode": "CM" },
+      { "country": "Cape Verde", "countryCode": "CV" },
+      { "country": "Central African Republic (The)", "countryCode": "CF" },
+      { "country": "Chad", "countryCode": "TD" },
+      { "country": "Comoros (The)", "countryCode": "KM" },
+      { "country": "Equatorial Guinea", "countryCode": "GQ" },
+      { "country": "Ghana", "countryCode": "GH" },
+      { "country": "Guinea", "countryCode": "GN" },
+      { "country": "Guinea-Bissau", "countryCode": "GW" },
+      { "country": "Kenya", "countryCode": "KE" },
+      { "country": "Lesotho", "countryCode": "LS" },
+      { "country": "Madagascar", "countryCode": "MG" },
+      { "country": "Malawi", "countryCode": "MW" },
+      { "country": "Mauritania", "countryCode": "MR" },
+      { "country": "Mauritius", "countryCode": "MU" },
+      { "country": "Mozambique", "countryCode": "MZ" },
+      { "country": "Niger (The)", "countryCode": "NE" },
+      { "country": "Seychelles", "countryCode": "SC" },
+      { "country": "Sierra Leone", "countryCode": "SL" },
+      { "country": "Somalia", "countryCode": "SO" },
+      { "country": "South Sudan", "countryCode": "SS" },
+      { "country": "Swaziland", "countryCode": "SZ" },
+      { "country": "Togo", "countryCode": "TG" },
+      { "country": "Uganda", "countryCode": "UG" },
+      { "country": "Zambia", "countryCode": "ZM" },
+      { "country": "Zimbabwe", "countryCode": "ZW" }
+    ]
+  },
+  { 
+    "region": "West Indies, regional",
+    "regionCode": "380",
+    "countries": [
+      { "country": "Anguilla", "countryCode": "AI" },
+      { "country": "Bahamas (The)", "countryCode": "BS" },
+      { "country": "Bonaire, Saint Eustatius And Saba", "countryCode": "BQ" },
+      { "country": "Dominica", "countryCode": "DM" },
+      { "country": "Grenada", "countryCode": "GD" },
+      { "country": "Haiti", "countryCode": "HT" },
+      { "country": "Jamaica", "countryCode": "JM" },
+      { "country": "Puerto Rico", "countryCode": "PR" },
+      { "country": "Saint Barthélemy", "countryCode": "BL" },
+      { "country": "Saint Kitts And Nevis", "countryCode": "KN" },
+      { "country": "Saint Lucia", "countryCode": "LC" },
+      { "country": "Suriname", "countryCode": "SR" },
+      { "country": "Virgin Islands (British)", "countryCode": "VG" },
+      { "country": "Virgin Islands (U.S.)", "countryCode": "VI" }    
+    ]
+  },
+  { 
+    "region": "Other",
+    "regionCode": "0",
+    "countries": [
+      { "country": "Antarctica", "countryCode": "AQ" },
+      { "country": "French Southern Territories (The)", "countryCode": "TF" },
+      {
+        "country": "Saint Helena, Ascension And Tristan Da Cunha",
+        "countryCode": "SH"
+      },
+      {
+        "country": "South Georgia And The South Sandwich Islands",
+        "countryCode": "GS"
+      }
+    ]
+  }
+]

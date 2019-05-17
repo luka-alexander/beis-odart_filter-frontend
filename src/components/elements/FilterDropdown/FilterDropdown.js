@@ -1,0 +1,20 @@
+import React, { Component } from "react";
+
+class FilterCheckboxes extends Component {
+
+  render() {
+    return (
+      <div className="filter-container">
+        <span className="filter-title">
+          {this.props.title}
+        </span>
+        <div className="filter-dropdown">
+          {this.props.children}
+        </div>
+      </div>
+    )
+  }
+
+}
+
+export default FilterCheckboxes;
