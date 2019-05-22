@@ -52,6 +52,7 @@ body {
 .chart-container {
   background: $govuk-grey-4;
   border: 1px solid;
+  margin: 1em 0;
   padding: .5em 0;
 }
 
@@ -72,12 +73,15 @@ body {
     font-family: "nta", arial, sans-serif;
     margin-right: 5px;
     padding: 10px 15px;
+    &:hover {
+      background: $govuk-grey-2;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
     a {
       color: $govuk-black;
       text-decoration: none;
-    }
-    &:hover {
-      background: $govuk-grey-2;
     }
     .active {
       a {

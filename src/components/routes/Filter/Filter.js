@@ -160,7 +160,7 @@ class Search extends Component {
             </div>
 
             {activePage && (
-            <div className="govuk-grid-column-full">
+            <div className="govuk-grid-column-one-third">
               <div className="panel-blue">
                 <div className="govuk-caption-m">Page</div>
                 <div className="govuk-heading-l">
@@ -171,6 +171,9 @@ class Search extends Component {
             </div>
             )}
 
+          </div>
+          
+          <div className="govuk-grid-row">
             <div className="govuk-grid-column-one-half">
               <FilterKeyword />
             </div>

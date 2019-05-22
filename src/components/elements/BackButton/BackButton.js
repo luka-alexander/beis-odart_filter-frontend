@@ -1,9 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 
 import BaseLocale from "../../../locale/base"
 
-const BackButton = () => (
-  <a href="/" class="govuk-back-link">{BaseLocale.backText}</a>
-);
+class BackButton extends Component {
+
+  render() {
+    let url = "";
+    this.props.url ? url = this.props.url : url = "/";
+    return (<a href={url} className="govuk-back-link">{BaseLocale.backText}</a>)
+  }
+}
 
 export default BackButton;

@@ -11,8 +11,7 @@
   "orderLink": "/order",
   "dashboardTitle": "Dashboard / report page prototype",
   "dashboardLink": "/dashboard",
-  "dashboardPageTitle": "Report",
-  "dashboardSubTitle": "Exported report",
+  "dashboardPageTitle": "Exported Report",
   "totalGross": "Total spend: £",
   "keywordSearch": "Search by keyword:"
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./images/logo-beis.png";
 
 const Header = ({ label, text, type, id, value, handleChange }) => (
   <header className="govuk-header " role="banner" data-module="header">
