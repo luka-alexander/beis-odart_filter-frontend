@@ -15,13 +15,12 @@ class FilterKeyword extends Component {
 
   render() {
     return (  
-      <section className="filter-keyword col-12">
+      <section className="filter-keyword">
         <form>
           <input type="text" className="keyword-search" onChange={this.filterRecords} placeholder={BaseLocale.keywordSearch} />
           <fieldset className="searchby-filter">
             <input type="radio" name="searchby" value="country" />Country 
             <input type="radio" name="searchby" value="category" />Category
-            <input type="radio" name="searchby" value="programme" />Programme
           </fieldset>
         </form>
       </section>

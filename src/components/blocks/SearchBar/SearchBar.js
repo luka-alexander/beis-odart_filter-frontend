@@ -11,7 +11,7 @@ import Statuses from "../../../data/BEIS-ODA-statuses";
 class SearchBar extends Component {
   render() {
     return (
-      <section className="filters col-12">
+      <section className="filters">
         <FilterDropdown title="Country">
           <FilterCheckboxes callback={this.props.locationCallback} />
         </FilterDropdown>
@@ -28,7 +28,9 @@ class SearchBar extends Component {
           <FilterRadios callback={this.props.callback} selector="status" data={Statuses} dataKey="status" />
         </FilterDropdown>
 
-        <button onClick={this.props.reset}>Clear all filters</button>
+        <button className="govuk-button" onClick={this.props.reset}>
+          Clear all filters
+        </button>
       </section>
     )  
   }

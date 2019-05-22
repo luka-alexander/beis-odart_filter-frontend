@@ -1,14 +1,18 @@
 {
-  "projectTitle": "ODA Tracker",
-  "projectSubtitle": "This is the BEIS ODA tracker alpha. This is a prototype that will be used as a proof of concept for a replacement service for the current spreadsheet based tracker service.",
-  "homeHeaderTwo": "List of Prototypes",
+  "projectTitle": "BEIS ODART Tracker",
+  "projectSubtitle": "This is the BEIS ODART tracker alpha. This is a prototype that will be used as a proof of concept for a replacement service for the current spreadsheet based tracker service.",
+  "notFoundTitle": "Page not found",
+  "notFoundSubtitle": "This page cannot be found.",
+  "homeHeaderTwo": "Prototypes",
   "backText": "Back",
   "searchTitle": "Filter page prototype",
   "searchLink": "/filter",
   "orderTitle": "Ordering page prototype",
   "orderLink": "/order",
-  "dashboardTitle": "Dashboard / login page prototype",
+  "dashboardTitle": "Dashboard / report page prototype",
   "dashboardLink": "/dashboard",
+  "dashboardPageTitle": "Report",
+  "dashboardSubTitle": "Exported report",
   "totalGross": "Total spend: £",
   "keywordSearch": "Search by keyword:"
 }

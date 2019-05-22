@@ -4,11 +4,9 @@ import BaseLocale from "../../../locale/base"
 
 const Totals = (props) => {
   return(
-    <div className="col-12">
-      <section className="record-totals">
-        {BaseLocale.totalGross}{props.totalFigure}
-      </section>
-    </div>
+    <section className="record-totals">
+      {BaseLocale.totalGross}{props.totalFigure}
+    </section>
   )
 }
 
