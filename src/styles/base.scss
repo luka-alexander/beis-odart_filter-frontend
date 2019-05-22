@@ -73,6 +73,10 @@ body {
     font-family: "nta", arial, sans-serif;
     margin-right: 5px;
     padding: 10px 15px;
+    &.active {
+      color: $govuk-grey-1;
+      background: $govuk-black;
+    }
     &:hover {
       background: $govuk-grey-2;
     }
@@ -82,12 +86,6 @@ body {
     a {
       color: $govuk-black;
       text-decoration: none;
-    }
-    .active {
-      a {
-        color: $govuk-grey-1;
-        background: $govuk-black;
-      }
     }
   }
 }
@@ -115,36 +113,51 @@ body {
   margin: 1em 0;
 }
 
+
 .filter-container {
   border-bottom: 1px solid #000;
   float: left;
   font-size: 16px;
-  margin: 0 0.25em 0 0;
-  width: 20%;
-}
+  margin: 0 2em 1em 0;
+  width: 15%;
+  
+  .filter-category-wrapper {
+    clear: both;
+    padding: 0.5em 0;
+    width: 100%;
+    .category-title {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.25em;
+    }
+  }
 
-.filter-title {
-  padding-top: 9px;
-  padding-bottom: 13px;
-}
+  .filter-title {
+    cursor: pointer;
+    padding-top: 9px;
+    padding-bottom: 13px;
+    position: relative;
+    &:after {
+      @include govuk-shape-arrow($direction: down, $base: 10px, $height: 6px);
+  
+      content: "";
+  
+      // Vertically align with the parent element
+      position: absolute;
+  
+      top: -1px;
+      bottom: 1px;
+      right: 1em;
+  
+      margin: auto;
+    }
+  }
 
-.filter-category-wrapper {
-  clear: both;
-  padding: 0.5em 0;
-  width: 100%;
-}
-
-.category-title {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25em;
-}
-
-.filter-container {
   .filter-dropdown {
     background: #fff;
     border: 1px solid $govuk-grey-4;
     display: none;
+    min-width: 20em;
     max-width: 800px;
     max-height: 400px;
     overflow: scroll;
