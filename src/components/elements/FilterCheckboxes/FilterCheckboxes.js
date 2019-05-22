@@ -13,7 +13,7 @@ class FilterCheckboxes extends Component {
       <React.Fragment>
         {Locations.map((region, regionKey) => {
           return (
-            <div key={regionKey} className="col-12 filter-category-wrapper">
+            <div key={regionKey} className="filter-category-wrapper">
               <span className="category-title">{region.region}</span>
               <div className="filter-item-wrapper">
               {region.countries.map((country, countryKey) => {

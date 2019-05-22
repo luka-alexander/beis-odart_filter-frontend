@@ -5,7 +5,6 @@ import Pagination from "react-js-pagination";
 import numberWithCommas from "../../../utilities/Utilities";
 
 import BackButton from "../../elements/BackButton/BackButton";
-import Chart from "../../elements/Chart/Chart";
 import FilterKeyword from "../../elements/FilterKeyword/FilterKeyword";
 import RecordsTable from "../../elements/RecordsTable/RecordsTable";
 import Totals from "../../elements/Totals/Totals";
@@ -58,7 +57,7 @@ class Search extends Component {
     
     let totalFigure = 0;
     allData.forEach(function(item) {
-      totalFigure += item.grossAmount;
+      totalFigure += item.predictedAmount;
     });
 
     totalFigure = numberWithCommas(totalFigure.toFixed(2));
@@ -137,49 +136,68 @@ class Search extends Component {
     } = this.state;
     const totalData = allData.length;
 
-    if (totalData === 0) return null;
-
     return (
-      <div className="row">
+      <div className="govuk-width-container govuk-wider-container">
+        <main className="govuk-main-wrapper " id="main-content" role="main">
+          <div className="govuk-grid-row">
+            
+            <div className="govuk-grid-column-full">
+              <BackButton />
+            </div>
 
-        <BackButton />
+            <div className="govuk-grid-column-full">
+              <SearchBar 
+                callback={this.handleSelection} 
+                locationCallback={this.handleLocation} 
+                reset={this.resetAll}
+              />
+            </div>
 
-        <SearchBar 
-          callback={this.handleSelection} 
-          locationCallback={this.handleLocation} 
-          reset={this.resetAll}
-        />
 
-        <div className="col-12">
-          <h2>
-            <strong>{totalData}</strong>{" "}
-            {totalData > 1 ? "Records" : "Record"}
-          </h2>
-          {activePage && (
-            <span className="current-page">
-              Page <span>{activePage}</span> /{" "}
-              <span>{Math.ceil(allData.length / dataPerPage)}</span>
-            </span>
-          )}
-        </div>
-      
-        <div className="col-12">
-          <Pagination 
-            activePage={activePage}
-            itemsCountPerPage={dataPerPage}
-            totalItemsCount={allData.length}
-            pageRangeDisplayed={5}
-            onChange={this.handlePageChange}
-          />
-        </div>
+            <div className="govuk-grid-column-full">
+              <div className="govuk-caption-m">Records</div>
+              <div className="govuk-heading-m">{totalData}</div>
+            </div>
 
-        <FilterKeyword />
-        
-        <RecordsTable loading={this.state.loading} sortCallback={this.onSort} data={currentData} />
-        
-        <Totals totalFigure={totalFigure} />
-        <Chart data={allData} />
+            {activePage && (
+            <div className="govuk-grid-column-one-third">
+              <div className="panel-blue">
+                <div className="govuk-caption-m">Page</div>
+                <div className="govuk-heading-l">
+                  <span>{this.state.activePage}</span> of 
+                  <span> {Math.ceil(allData.length / dataPerPage)}</span>
+                </div>
+              </div>
+            </div>
+            )}
 
+          </div>
+          
+          <div className="govuk-grid-row">
+            <div className="govuk-grid-column-one-half">
+              <FilterKeyword />
+            </div>
+
+            <div className="govuk-grid-column-one-half">
+              <Pagination 
+                activePage={activePage}
+                itemsCountPerPage={dataPerPage}
+                totalItemsCount={allData.length}
+                pageRangeDisplayed={5}
+                onChange={this.handlePageChange}
+              />
+            </div>
+
+            <div className="govuk-grid-column-full">
+              <RecordsTable loading={this.state.loading} sortCallback={this.onSort} data={currentData} />
+            </div>
+
+            <div className="govuk-grid-column-full">
+              <Totals totalFigure={totalFigure} />
+            </div>
+
+          </div>
+        </main>
       </div>
     )
   }

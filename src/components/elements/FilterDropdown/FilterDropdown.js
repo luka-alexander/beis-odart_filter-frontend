@@ -5,9 +5,9 @@ class FilterCheckboxes extends Component {
   render() {
     return (
       <div className="filter-container">
-        <span className="filter-title">
+        <div className="filter-title">
           {this.props.title}
-        </span>
+        </div>
         <div className="filter-dropdown">
           {this.props.children}
         </div>
