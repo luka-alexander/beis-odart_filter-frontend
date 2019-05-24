@@ -10,7 +10,10 @@ const Directory = () => (
         <a href={BaseLocale.searchLink}>{BaseLocale.searchTitle}</a>
       </li>
       <li>
-        <a href={BaseLocale.reportLink}>{BaseLocale.reportTitle}</a>
+        <a href={BaseLocale.transparencyLink}>{BaseLocale.transparencyTitle}</a>
+      </li>
+      <li>
+        <a href={BaseLocale.dashboardLink}>{BaseLocale.dashboardTitle}</a>
       </li>
     </ul>
   </section>

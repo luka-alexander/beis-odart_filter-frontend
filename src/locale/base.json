@@ -7,9 +7,11 @@
   "backText": "Back",
   "searchTitle": "Filter page prototype",
   "searchLink": "/filter",
-  "reportTitle": "Report page prototype",
-  "reportLink": "/report",
-  "reportPageTitle": "Exported Report",
+  "transparencyTitle": "Transparency reporting prototype",
+  "transparencyLink": "/transparency",
+  "dashboardTitle": "Dashboard / report page prototype",
+  "dashboardLink": "/dashboard",
+  "dashboardPageTitle": "Exported Report",
   "totalGross": "Total spend: £",
   "keywordSearch": "Search by keyword:"
 }
