@@ -17,6 +17,9 @@ class RecordsTable extends Component {
               <th className="govuk-table__header" onClick={() => this.props.sortCallback('grantCall')}>
                 Grant Call
               </th>
+              <th className="govuk-table__header" onClick={() => this.props.sortCallback('goal')}>
+                Goal
+              </th>
               <th className="govuk-table__header" onClick={() => this.props.sortCallback('classificationName')}>
                 Classification
               </th>
@@ -47,6 +50,9 @@ class RecordsTable extends Component {
                   <td className="govuk-table__cell" data-title="Grant Call">
                     {record.grantCall}
                   </td>
+                  <td className="govuk-table__cell" data-title="Goal">
+                    {record.goal}
+                  </td>
                   <td className="govuk-table__cell" data-title="Classification">
                     {record.classificationName}
                   </td>
@@ -57,7 +63,7 @@ class RecordsTable extends Component {
                     {record.paymentQuarter}
                   </td>
                   <td className="govuk-table__cell" data-title="Amount">
-                    £{record.predictedAmount.toFixed(2)}
+                    £{record.grossAmount.toFixed(2)}
                   </td>
                   <td className="govuk-table__cell" data-title="Country">
                     {record.country}
