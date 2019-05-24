@@ -56,7 +56,7 @@ class Transparency extends Component {
                         <td className="govuk-table__cell">{item.planned_activity_end_date}</td>
                         <td className="govuk-table__cell">{item.recipient_country_name}</td>
                         <td className="govuk-table__cell">
-                          <a href="https://iati.cove.opendataservices.coop/media/9f3b5f30-9ea9-403f-936c-b6770bbf9af1/unflattened.xml">
+                          <a href="https://iati.cove.opendataservices.coop/media/9f3b5f30-9ea9-403f-936c-b6770bbf9af1/unflattened.xml" target="_blank" rel="noopener noreferrer">
                             create a new report
                           </a>
                         </td>
