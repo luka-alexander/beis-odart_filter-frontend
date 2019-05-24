@@ -117,6 +117,16 @@ class Search extends Component {
     };
   }
 
+  // Sorting by clicking on table headers
+  onSortFilter = (key) => {
+    let dataCopy = [...this.state.allData];
+    dataCopy.sort(this.compareBy(key));
+    this.setState({
+      allData: dataCopy
+    });
+    this.updateAllData(dataCopy);
+  }
+
   filterByKeyword = (keyword, category) => {
     let resultsData = this.state.allData;
     if(keyword !== "") {
@@ -135,8 +145,8 @@ class Search extends Component {
   render() {
     const {
       allData,
-      currentPageData,
       activePage,
+      currentPageData,
       dataPerPage,
       totalFigure
     } = this.state;
@@ -195,7 +205,7 @@ class Search extends Component {
             </div>
 
             <div className="govuk-grid-column-full">
-              <RecordsTable loading={this.state.loading} sortCallback={this.onSort} data={currentPageData} />
+              <RecordsTable loading={this.state.loading} sortCallback={this.onSortFilter} data={currentPageData} />
             </div>
 
             <div className="govuk-grid-column-full">

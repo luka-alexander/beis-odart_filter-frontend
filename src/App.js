@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 // Route templates
 import Home from "./components/routes/Home/Home";
 import Filter from "./components/routes/Filter/Filter";
-import Order from "./components/routes/Order/Order";
 import NotFound from "./components/routes/NotFound/NotFound";
 import Report from "./components/routes/Report/Report";
 
@@ -22,7 +21,6 @@ const App = () => {
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/filter" component={Filter} exact />
-          <Route path="/order" component={Order} exact />
           <Route path="/report" component={Report} exact />
           <Route component={NotFound} />
         </Switch>
