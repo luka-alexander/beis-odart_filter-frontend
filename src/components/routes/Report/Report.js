@@ -5,14 +5,14 @@ import LineChart from "../../elements/LineChart/LineChart";
 import BaseLocale from "../../../locale/base"
 import BackButton from "../../elements/BackButton/BackButton";
 
-const Dashboard = () => {
+const Report = () => {
   return (
     <div className="govuk-width-container govuk-wider-container">
       <main className="govuk-main-wrapper" id="main-content" role="main">
         <BackButton url="/filter" />
         <div className="govuk-grid-row">
           <div className="govuk-grid-column-full">
-            <h1 className="govuk-heading-xl">{BaseLocale.dashboardPageTitle}</h1>
+            <h1 className="govuk-heading-xl">{BaseLocale.reportPageTitle}</h1>
             <div className="govuk-caption-m">Relevant Quarter</div>
             <div className="govuk-heading-m">2017-2018 Q3</div>
           </div>
@@ -43,4 +43,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard;
+export default Report;

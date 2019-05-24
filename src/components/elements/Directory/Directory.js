@@ -13,7 +13,7 @@ const Directory = () => (
         <a href={BaseLocale.orderLink}>{BaseLocale.orderTitle}</a>
       </li>
       <li>
-        <a href={BaseLocale.dashboardLink}>{BaseLocale.dashboardTitle}</a>
+        <a href={BaseLocale.reportLink}>{BaseLocale.reportTitle}</a>
       </li>
     </ul>
   </section>

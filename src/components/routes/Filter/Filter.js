@@ -16,7 +16,7 @@ import SampleData from "../../../data/BEIS-ODA-tracker";
 class Search extends Component {
   state = {
     allData: [],
-    currentData: [],
+    currentPageData: [],
     dataPerPage: 15,
     activePage: 1,
     offset: 0,
@@ -28,13 +28,13 @@ class Search extends Component {
   // Set the original allData state to the full JSON file
   componentDidMount() {
     this.setState({ 
-      currentData: [],
+      currentPageData: [],
       allData: SampleData,
       dataPerPage: 15,
       activePage: 1,
     });
     setTimeout(() => {
-      this.handleCurrentData(this.state.activePage);
+      this.handleCurrentPageData(this.state.activePage);
     }, 300)
   }
 
@@ -45,15 +45,15 @@ class Search extends Component {
       activePage: 1
     })
     setTimeout(() => {
-      this.handleCurrentData(this.state.activePage);
+      this.handleCurrentPageData(this.state.activePage);
     }, 300)
   }
 
-  // Handle current data after pagination and filtering
-  handleCurrentData = (pageNumber) => {
+  // Handle current page data after pagination and filtering
+  handleCurrentPageData = (pageNumber) => {
     const { allData, dataPerPage } = this.state;
     const offset = (pageNumber - 1) * dataPerPage;
-    const currentData = allData.slice(offset, offset + dataPerPage);  
+    const currentPageData = allData.slice(offset, offset + dataPerPage);  
     
     let totalFigure = 0;
     allData.forEach(function(item) {
@@ -62,7 +62,7 @@ class Search extends Component {
 
     totalFigure = numberWithCommas(totalFigure.toFixed(2));
 
-    this.setState({ currentData, totalFigure });
+    this.setState({ currentPageData, totalFigure });
   } 
 
   // Pagination - reset to 1
@@ -71,7 +71,7 @@ class Search extends Component {
       activePage: 1
     });
 
-    this.handleCurrentData(this.state.activePage);
+    this.handleCurrentPageData(this.state.activePage);
   };
 
   // Pagination - handle change of page
@@ -79,7 +79,7 @@ class Search extends Component {
     this.setState({
       activePage: pageNumber
     });
-    this.handleCurrentData(pageNumber);
+    this.handleCurrentPageData(pageNumber);
   }
 
   // Handle multi layered selection
@@ -118,21 +118,24 @@ class Search extends Component {
   }
 
   filterByKeyword = (keyword, category) => {
-    console.log(keyword);
     let resultsData = this.state.allData;
-    resultsData = resultsData.filter(function(item){
-      return item[category].toLowerCase().search(
-        keyword.toLowerCase()
-      ) !== -1;
-    });
-    this.setState({currentData: resultsData});
-    this.updateAllData(resultsData);
+    if(keyword !== "") {
+      resultsData = resultsData.filter(function(item){
+        return item[category].toLowerCase().search(
+          keyword.toLowerCase()
+        ) !== -1;
+      });
+      this.updateAllData(resultsData);
+    }
+    else {
+      this.resetAll();
+    }
   }
 
   render() {
     const {
       allData,
-      currentData,
+      currentPageData,
       activePage,
       dataPerPage,
       totalFigure
@@ -192,7 +195,7 @@ class Search extends Component {
             </div>
 
             <div className="govuk-grid-column-full">
-              <RecordsTable loading={this.state.loading} sortCallback={this.onSort} data={currentData} />
+              <RecordsTable loading={this.state.loading} sortCallback={this.onSort} data={currentPageData} />
             </div>
 
             <div className="govuk-grid-column-full">

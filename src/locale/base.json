@@ -9,9 +9,9 @@
   "searchLink": "/filter",
   "orderTitle": "Ordering page prototype",
   "orderLink": "/order",
-  "dashboardTitle": "Dashboard / report page prototype",
-  "dashboardLink": "/dashboard",
-  "dashboardPageTitle": "Exported Report",
+  "reportTitle": "Report page prototype",
+  "reportLink": "/report",
+  "reportPageTitle": "Exported Report",
   "totalGross": "Total spend: £",
   "keywordSearch": "Search by keyword:"
 }

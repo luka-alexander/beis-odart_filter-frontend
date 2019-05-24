@@ -77,7 +77,7 @@ class RecordsTable extends Component {
           </tbody>
         </table>
         }
-        <a className="govuk-button" href="/dashboard">Export report</a>
+        <a className="govuk-button" href="/report">Export report</a>
       </section>
     );
   }
