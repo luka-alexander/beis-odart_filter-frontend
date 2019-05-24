@@ -107,11 +107,10 @@ body {
   font-size: 22px;
 }
 
-/* Search results */
+/* Filtering page */
 .filters {
   margin: 1em 0;
 }
-
 
 .filter-container {
   border-bottom: 1px solid #000;
@@ -124,6 +123,20 @@ body {
     clear: both;
     padding: 0.5em 0;
     width: 100%;
+    .filter-item-wrapper {
+      max-width: 85%;
+      margin-bottom: 1em;
+      overflow: auto;
+      fieldset {
+        color: $govuk-black;
+        float: left;
+        margin: 0.25em 0;
+        width: 50%;
+        div {
+          margin: .25em 0;
+        }
+      }
+    }
     .category-title {
       display: block;
       font-weight: 600;
@@ -184,24 +197,6 @@ body {
   }
 }
 
-.filter-category-wrapper {
-  .filter-item-wrapper {
-    max-width: 85%;
-    margin-bottom: 1em;
-    overflow: auto;
-    fieldset {
-      color: $govuk-black;
-      float: left;
-      margin: 0.25em 0;
-      width: 50%;
-      div {
-        margin: .25em 0;
-      }
-    }
-  }
-  padding: 0.5em 0;
-}
-
 /* Keyword Search */
 .filter-keyword {
   margin: 1em 0 3em;
@@ -229,5 +224,12 @@ fieldset.searchby-filter {
   display: inline-block;
   input {
     margin: 0.5em 0.5em 0 1em;
+  }
+}
+
+/* Search results table */
+table {
+  th {
+    cursor: pointer;
   }
 }
