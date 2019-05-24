@@ -57,7 +57,7 @@ class Search extends Component {
     
     let totalFigure = 0;
     allData.forEach(function(item) {
-      totalFigure += item.predictedAmount;
+      totalFigure += item.grossAmount;
     });
 
     totalFigure = numberWithCommas(totalFigure.toFixed(2));
@@ -117,13 +117,16 @@ class Search extends Component {
     };
   }
 
-  // make copy of data to compare
-  onSort = (key) => {
-    let dataCopy = [...this.state.allData];
-    dataCopy.sort(this.compareBy(key));
-    this.setState({
-      allData: dataCopy
+  filterByKeyword = (keyword, category) => {
+    console.log(keyword);
+    let resultsData = this.state.allData;
+    resultsData = resultsData.filter(function(item){
+      return item[category].toLowerCase().search(
+        keyword.toLowerCase()
+      ) !== -1;
     });
+    this.setState({currentData: resultsData});
+    this.updateAllData(resultsData);
   }
 
   render() {
@@ -175,7 +178,7 @@ class Search extends Component {
           
           <div className="govuk-grid-row">
             <div className="govuk-grid-column-one-half">
-              <FilterKeyword />
+              <FilterKeyword callback={this.filterByKeyword} />
             </div>
 
             <div className="govuk-grid-column-one-half">
