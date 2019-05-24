@@ -4,10 +4,9 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 // Route templates
 import Home from "./components/routes/Home/Home";
 import Filter from "./components/routes/Filter/Filter";
-import Order from "./components/routes/Order/Order";
 import Transparency from "./components/routes/Transparency/Transparency";
 import NotFound from "./components/routes/NotFound/NotFound";
-import Dashboard from "./components/routes/Dashboard/Dashboard";
+import Report from "./components/routes/Report/Report";
 
 // Blocks
 import Header from "./components/blocks/Header/Header";
@@ -23,8 +22,8 @@ const App = () => {
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/filter" component={Filter} exact />
-          <Route path="/order" component={Order} exact />
-          <Route path="/dashboard" component={Dashboard} exact />
+          <Route path="/report" component={Report} exact />
+          <Route path="/transparency" component={Transparency} exact />
           <Route component={NotFound} />
         </Switch>
         <Footer />
