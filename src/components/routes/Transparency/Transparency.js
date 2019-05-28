@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ActivityData from "../../../data/BEIS-ODA-activities";
 import BackButton from '../../elements/BackButton/BackButton';
 
 import BaseLocale from "../../../locale/base";
@@ -21,7 +20,6 @@ class Transparency extends Component {
     } catch (error) {
       console.log(error);
     }
-    console.log(ActivityData);
   }
 
   render() {

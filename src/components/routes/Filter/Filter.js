@@ -47,6 +47,10 @@ class Search extends Component {
   // Reset all data back to default
   resetAll = () => {
     this.setState({
+      countries: [],
+      paymentQuarter: "",
+      grantCall: "",
+      status: "",
       filteredData: SampleData,
       activePage: 1
     })
