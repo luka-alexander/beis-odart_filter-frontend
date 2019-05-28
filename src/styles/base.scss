@@ -62,6 +62,22 @@ p {
   padding: .5em 0;
 }
 
+/*----- Loading animation -----*/
+.loader {
+  animation: spin 0.8s linear infinite;
+  border: 5px solid $govuk-grey-4; /* Light grey */
+  border-top: 5px solid $govuk-blue; /* Blue */
+  border-radius: 50%;
+  height: 50px;
+  margin: 20px auto;
+  width: 50px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /*----- Pagination -------*/
 .pagination {
   display: block;
