@@ -132,7 +132,9 @@ class Search extends Component {
     } else {
       this.handleSingleSelector(selector, dataKey)
     }
-    this.doFilter();
+    setTimeout(() => {
+      this.doFilter();
+    }, 300)
   }
 
   /*----- 
@@ -147,7 +149,7 @@ class Search extends Component {
     dataCopy = this.filterDataItems(dataCopy, [this.state.paymentQuarter, this.state.grantCall, this.state.status])
     setTimeout(() => {
       this.handleUpdateData(dataCopy);
-    }, 500)
+    }, 300)
   }
 
   // Filter by many params
