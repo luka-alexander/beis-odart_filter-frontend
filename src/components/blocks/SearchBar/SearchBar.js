@@ -13,19 +13,19 @@ class SearchBar extends Component {
     return (
       <section className="filters">
         <FilterDropdown title="Country">
-          <FilterCheckboxes callback={this.props.locationCallback} />
+          <FilterCheckboxes callback={this.props.filterCallback} dataKey="country" />
         </FilterDropdown>
 
         <FilterDropdown title="Payment Quarter">
-          <FilterRadios callback={this.props.callback} selector="quarter" data={Dates} dataKey="paymentQuarter" />
+          <FilterRadios callback={this.props.callback} data={Dates} dataKey="paymentQuarter" />
         </FilterDropdown>
 
         <FilterDropdown title="Grant">
-          <FilterRadios callback={this.props.callback} selector="grant" data={Grants} dataKey="grantCall" />
+          <FilterRadios callback={this.props.callback} data={Grants} dataKey="grantCall" />
         </FilterDropdown>
 
         <FilterDropdown title="Status">
-          <FilterRadios callback={this.props.callback} selector="status" data={Statuses} dataKey="status" />
+          <FilterRadios callback={this.props.callback} data={Statuses} dataKey="status" />
         </FilterDropdown>
 
         <button className="govuk-button" onClick={this.props.reset}>

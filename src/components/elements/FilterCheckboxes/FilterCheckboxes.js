@@ -5,7 +5,7 @@ class FilterCheckboxes extends Component {
 
   // Send event to callback prop when checkbox selected
   handleChange = (event) => {
-    this.props.callback(event.target.value);
+    this.props.callback(event.target.value, this.props.dataKey);
   }
 
   render() {
