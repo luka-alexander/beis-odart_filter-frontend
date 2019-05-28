@@ -17,8 +17,8 @@ import BaseLocale from "../../../locale/base";
 
 class Search extends Component {
   state = {
-    allData: [],
-    filteredData: [],
+    allData: SampleData,
+    filteredData: SampleData,
     currentPageData: [],
     dataPerPage: 15,
     activePage: 1,
@@ -29,22 +29,20 @@ class Search extends Component {
     countries: [],
     paymentQuarter: "",
     grantCall: "",
-    status: ""
+    status: "",
   };
+
+  fields = ['paymentQuarter', 'grantCall', 'status'];
 
   // Set the original allData state to the full JSON file
   componentDidMount() {
-    this.setState({ 
-      currentPageData: [],
-      allData: SampleData,
-      filteredData: SampleData,
-      dataPerPage: 15,
-      activePage: 1,
-    });
-    setTimeout(() => {
-      this.handleCurrentPageData(this.state.activePage);
-    }, 300)
+    this.handleCurrentPageData(this.state.activePage);
+    this.filterDataItems = this.filterDataItems.bind(this);
   }
+
+  /*----- 
+  RESETS / UPDATES
+  ----- */
 
   // Reset all data back to default
   resetAll = () => {
@@ -54,9 +52,21 @@ class Search extends Component {
     })
     setTimeout(() => {
       this.handleCurrentPageData(this.state.activePage);
-    }, 300)
+    }, 200)
   }
 
+  // Pagination - reset to 1
+  resetPage = () => {
+    this.setState({
+      activePage: 1
+    });
+
+    this.handleCurrentPageData(this.state.activePage);
+  };
+
+  /*----- 
+  HANDLERS / STATE
+  ----- */
   // Handle current page data after pagination and filtering
   handleCurrentPageData = (pageNumber) => {
     const { filteredData, dataPerPage } = this.state;
@@ -72,22 +82,24 @@ class Search extends Component {
 
     this.setState({ currentPageData, totalFigure });
   } 
-
-  // Pagination - reset to 1
-  resetPage = () => {
-    this.setState({
-      activePage: 1
-    });
-
-    this.handleCurrentPageData(this.state.activePage);
-  };
-
+  
   // Pagination - handle change of page
   handlePageChange = (pageNumber) => {
     this.setState({
       activePage: pageNumber
     });
     this.handleCurrentPageData(pageNumber);
+  }
+
+  // Update state with new data and remove loading spinner
+  handleUpdateData = (newData) => {
+    setTimeout(() => {
+      this.setState({ 
+        filteredData: newData,
+        loading: false
+      });
+      this.resetPage();
+    }, 500)
   }
 
   // Handle country selection
@@ -98,7 +110,7 @@ class Search extends Component {
       countryArray.splice(countryArray.indexOf(countryName), 1) : 
       countryArray.push(countryName);
 
-    this.setState({   countries: countryArray });
+    this.setState({ countries: countryArray });
   }
 
   // Handle single layered selection
@@ -116,37 +128,42 @@ class Search extends Component {
     } else {
       this.handleSingleSelector(selector, dataKey)
     }
-    setTimeout(() => {
-      this.doFilter();
-    }, 500)
+    this.doFilter();
   }
 
+  /*----- 
+  ACTIONS / FILTERS
+  ----- */
   doFilter = () => {
     // Filter to see if country included in country array
-    let resultsData = [];
-    if(this.state.countries.length) {
-      resultsData = this.state.allData.filter(item => this.state.countries.includes(item.country));
+    let dataCopy = [...this.state.allData];
+    if(this.state.countries.length !== 0) {
+      dataCopy = dataCopy.filter(item => this.state.countries.includes(item.country));
     }
-    
-    this.updateAllData(resultsData);
+    dataCopy = this.filterDataItems(dataCopy, [this.state.paymentQuarter, this.state.grantCall, this.state.status])
+    setTimeout(() => {
+      this.handleUpdateData(dataCopy);
+    }, 500)
   }
 
-  // Update state with new data and remove loading spinner
-  updateAllData = (newData) => {
-    setTimeout(() => {
-      this.setState({ 
-        filteredData: newData,
-        loading: false
+  // Filter by many params
+  filterDataItems = (data, filterParams) => {
+    return data.filter(item => {
+      return this.fields.every((fieldName, index) => {
+        if(fieldName !== "") {
+          return filterParams[index] == 0 || (item[fieldName] == filterParams[index]);
+        } else {
+          return item;
+        }
       });
-      this.resetPage();
-    }, 500)
+    });
   }
 
   // Sorting data by clicking on table headers
   onSortFilter = (key) => {
     let dataCopy = [...this.state.filteredData];
     dataCopy.sort(this.keywordCompare(key));
-    this.updateAllData(dataCopy);
+    this.handleUpdateData(dataCopy);
   }
 
   // Filter items by key and value
@@ -167,7 +184,7 @@ class Search extends Component {
           keyword.toLowerCase()
         ) !== -1;
       });
-      this.updateAllData(resultsData);
+      this.handleUpdateData(resultsData);
     }
     else {
       this.resetAll();
@@ -196,7 +213,6 @@ class Search extends Component {
 
             <div className="govuk-grid-column-full">
               <SearchBar 
-                callback={this.handleSingleSelector} 
                 filterCallback={this.handleFilterTerms}
                 reset={this.resetAll}
               />

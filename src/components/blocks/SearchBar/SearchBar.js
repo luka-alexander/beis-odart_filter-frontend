@@ -17,15 +17,15 @@ class SearchBar extends Component {
         </FilterDropdown>
 
         <FilterDropdown title="Payment Quarter">
-          <FilterRadios callback={this.props.callback} data={Dates} dataKey="paymentQuarter" />
+          <FilterRadios callback={this.props.filterCallback} data={Dates} dataKey="paymentQuarter" />
         </FilterDropdown>
 
         <FilterDropdown title="Grant">
-          <FilterRadios callback={this.props.callback} data={Grants} dataKey="grantCall" />
+          <FilterRadios callback={this.props.filterCallback} data={Grants} dataKey="grantCall" />
         </FilterDropdown>
 
         <FilterDropdown title="Status">
-          <FilterRadios callback={this.props.callback} data={Statuses} dataKey="status" />
+          <FilterRadios callback={this.props.filterCallback} data={Statuses} dataKey="status" />
         </FilterDropdown>
 
         <button className="govuk-button" onClick={this.props.reset}>
