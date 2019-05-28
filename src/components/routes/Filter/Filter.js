@@ -18,13 +18,18 @@ import BaseLocale from "../../../locale/base";
 class Search extends Component {
   state = {
     allData: [],
+    filteredData: [],
     currentPageData: [],
     dataPerPage: 15,
     activePage: 1,
-    offset: 0,
     totalPages: 0,
+    offset: 0,
     loading: false,
-    totalFigure: 0
+    totalFigure: 0,
+    countries: [],
+    paymentQuarter: "",
+    grantCall: "",
+    status: ""
   };
 
   // Set the original allData state to the full JSON file
@@ -32,6 +37,7 @@ class Search extends Component {
     this.setState({ 
       currentPageData: [],
       allData: SampleData,
+      filteredData: SampleData,
       dataPerPage: 15,
       activePage: 1,
     });
@@ -43,7 +49,7 @@ class Search extends Component {
   // Reset all data back to default
   resetAll = () => {
     this.setState({
-      allData: SampleData,
+      filteredData: SampleData,
       activePage: 1
     })
     setTimeout(() => {
@@ -53,12 +59,12 @@ class Search extends Component {
 
   // Handle current page data after pagination and filtering
   handleCurrentPageData = (pageNumber) => {
-    const { allData, dataPerPage } = this.state;
+    const { filteredData, dataPerPage } = this.state;
     const offset = (pageNumber - 1) * dataPerPage;
-    const currentPageData = allData.slice(offset, offset + dataPerPage);  
+    const currentPageData = filteredData.slice(offset, offset + dataPerPage);  
     
     let totalFigure = 0;
-    allData.forEach(function(item) {
+    filteredData.forEach(function(item) {
       totalFigure += item.grossAmount;
     });
 
@@ -84,34 +90,67 @@ class Search extends Component {
     this.handleCurrentPageData(pageNumber);
   }
 
-  // Handle multi layered selection
+  // Handle country selection
   handleLocation = (countryName) => {
-    this.setState({ loading: true });
-    // TODO: Add region select option
-    let resultsData = this.state.allData.filter(item => item.country === countryName);
-    this.updateAllData(resultsData);
+    // Make array copy and handle addition or removal
+    let countryArray = this.state.countries;
+    countryArray.includes(countryName) ? 
+      countryArray.splice(countryArray.indexOf(countryName), 1) : 
+      countryArray.push(countryName);
+
+    this.setState({   countries: countryArray });
   }
 
   // Handle single layered selection
-  handleSelection = (selector, dataKey) => {
-    this.setState({ loading: true });
-    let resultsData = this.state.allData.filter(item => item[dataKey] === selector);
-    this.updateAllData(resultsData);
+  handleSingleSelector = (selector, dataKey) => {
+    this.setState({
+      [dataKey]: selector
+    })
   }
   
+  // Filter handler
+  handleFilterTerms = (selector, dataKey) => {
+    this.setState({ loading: true });
+    if(dataKey === "country") {
+      this.handleLocation(selector)
+    } else {
+      this.handleSingleSelector(selector, dataKey)
+    }
+    setTimeout(() => {
+      this.doFilter();
+    }, 500)
+  }
+
+  doFilter = () => {
+    // Filter to see if country included in country array
+    let resultsData = [];
+    if(this.state.countries.length) {
+      resultsData = this.state.allData.filter(item => this.state.countries.includes(item.country));
+    }
+    
+    this.updateAllData(resultsData);
+  }
+
   // Update state with new data and remove loading spinner
   updateAllData = (newData) => {
     setTimeout(() => {
       this.setState({ 
-        allData: newData,
+        filteredData: newData,
         loading: false
       });
       this.resetPage();
     }, 500)
   }
 
+  // Sorting data by clicking on table headers
+  onSortFilter = (key) => {
+    let dataCopy = [...this.state.filteredData];
+    dataCopy.sort(this.keywordCompare(key));
+    this.updateAllData(dataCopy);
+  }
+
   // Filter items by key and value
-  compareBy = (key) => {
+  keywordCompare = (key) => {
     return function (a, b) {
       if (a[key] < b[key]) return -1;
       if (a[key] > b[key]) return 1;
@@ -119,18 +158,9 @@ class Search extends Component {
     };
   }
 
-  // Sorting by clicking on table headers
-  onSortFilter = (key) => {
-    let dataCopy = [...this.state.allData];
-    dataCopy.sort(this.compareBy(key));
-    this.setState({
-      allData: dataCopy
-    });
-    this.updateAllData(dataCopy);
-  }
-
+  // Filter by keyword search box
   filterByKeyword = (keyword, category) => {
-    let resultsData = this.state.allData;
+    let resultsData = this.state.filteredData;
     if(keyword !== "") {
       resultsData = resultsData.filter(function(item){
         return item[category].toLowerCase().search(
@@ -146,13 +176,13 @@ class Search extends Component {
 
   render() {
     const {
-      allData,
+      filteredData,
       activePage,
       currentPageData,
       dataPerPage,
       totalFigure
     } = this.state;
-    const totalData = allData.length;
+    const totalData = filteredData.length;
 
     return (
       <div className="govuk-width-container govuk-wider-container">
@@ -161,13 +191,13 @@ class Search extends Component {
 
             <div className="govuk-grid-column-full">
               <BackButton />
-              <h1 class="govuk-heading-xl">{BaseLocale.filterTitle}</h1>
+              <h1 className="govuk-heading-xl">{BaseLocale.filterTitle}</h1>
             </div>
 
             <div className="govuk-grid-column-full">
               <SearchBar 
-                callback={this.handleSelection} 
-                locationCallback={this.handleLocation} 
+                callback={this.handleSingleSelector} 
+                filterCallback={this.handleFilterTerms}
                 reset={this.resetAll}
               />
             </div>
@@ -184,7 +214,7 @@ class Search extends Component {
                 <div className="govuk-caption-m">{BaseLocale.pageTitle}</div>
                 <div className="govuk-heading-l">
                   <span>{this.state.activePage}</span> /
-                  <span> {Math.ceil(allData.length / dataPerPage)}</span>
+                  <span> {Math.ceil(filteredData.length / dataPerPage)}</span>
                 </div>
               </div>
             </div>
@@ -201,7 +231,7 @@ class Search extends Component {
               <Pagination 
                 activePage={activePage}
                 itemsCountPerPage={dataPerPage}
-                totalItemsCount={allData.length}
+                totalItemsCount={filteredData.length}
                 pageRangeDisplayed={5}
                 onChange={this.handlePageChange}
               />
