@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Spinner from "../../elements/Spinner/Spinner";
+import BaseLocale from "../../../locale/base";
 
 class RecordsTable extends Component {
 
@@ -77,7 +78,7 @@ class RecordsTable extends Component {
           </tbody>
         </table>
         }
-        <a className="govuk-button" href="/report">Export report</a>
+        <a className="govuk-button" href="/report">{BaseLocale.generateReport}</a>
       </section>
     );
   }

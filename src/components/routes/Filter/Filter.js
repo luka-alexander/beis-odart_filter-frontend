@@ -13,6 +13,8 @@ import SearchBar from "../../blocks/SearchBar/SearchBar"
 
 import SampleData from "../../../data/BEIS-ODA-tracker";
 
+import BaseLocale from "../../../locale/base";
+
 class Search extends Component {
   state = {
     allData: [],
@@ -156,9 +158,10 @@ class Search extends Component {
       <div className="govuk-width-container govuk-wider-container">
         <main className="govuk-main-wrapper " id="main-content" role="main">
           <div className="govuk-grid-row">
-            
+
             <div className="govuk-grid-column-full">
               <BackButton />
+              <h1 class="govuk-heading-xl">{BaseLocale.filterTitle}</h1>
             </div>
 
             <div className="govuk-grid-column-full">
@@ -171,16 +174,16 @@ class Search extends Component {
 
 
             <div className="govuk-grid-column-full">
-              <div className="govuk-caption-m">Records</div>
+              <div className="govuk-caption-m">{BaseLocale.recordTitle}</div>
               <div className="govuk-heading-m">{totalData}</div>
             </div>
 
             {activePage && (
             <div className="govuk-grid-column-one-third">
               <div className="panel-blue">
-                <div className="govuk-caption-m">Page</div>
+                <div className="govuk-caption-m">{BaseLocale.pageTitle}</div>
                 <div className="govuk-heading-l">
-                  <span>{this.state.activePage}</span> of 
+                  <span>{this.state.activePage}</span> /
                   <span> {Math.ceil(allData.length / dataPerPage)}</span>
                 </div>
               </div>

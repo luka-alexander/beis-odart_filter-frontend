@@ -8,7 +8,7 @@ const Home = () => {
     <div className="govuk-width-container govuk-wider-container">
       <main className="govuk-main-wrapper " id="main-content" role="main">
         <h1 className="govuk-heading-xl">{BaseLocale.projectTitle}</h1>
-        <p className="govuk-body-lead">{BaseLocale.projectSubtitle}</p>
+        <h2 className="govuk-heading-m">{BaseLocale.projectTitleTwo}</h2>
         <Directory />
       </main>
     </div>

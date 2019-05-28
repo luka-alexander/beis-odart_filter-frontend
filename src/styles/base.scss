@@ -15,11 +15,13 @@ $govuk-grey-4: #f8f8f8;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
 body {
   font-family: "nta", Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  font-size: 0.875rem;
   line-height: 1.14286;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -29,6 +31,10 @@ body {
 // Container
 .govuk-width-container.govuk-wider-container {
   max-width: 1200px;
+}
+
+p {
+  margin-bottom: 2em;
 }
 
 // Panel blue

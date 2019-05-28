@@ -7,13 +7,13 @@ const Directory = () => (
     <h2 className="govuk-heading-l">{BaseLocale.homeHeaderTwo}</h2>
     <ul className="govuk-list govuk-list--bullet">
       <li>
-        <a href={BaseLocale.searchLink}>{BaseLocale.searchTitle}</a>
+        <a href={BaseLocale.filterLink}>{BaseLocale.filterTitle}</a>
       </li>
       <li>
         <a href={BaseLocale.transparencyLink}>{BaseLocale.transparencyTitle}</a>
       </li>
       <li>
-        <a href={BaseLocale.dashboardLink}>{BaseLocale.dashboardTitle}</a>
+        <a href={BaseLocale.reportLink}>{BaseLocale.reportTitle}</a>
       </li>
     </ul>
   </section>

@@ -2323,7 +2323,7 @@
     "countryCode": "TN",
     "regionName": "North of Sahara, regional",
     "regionCode": 189,
-    "status": "Amber",
+    "status": "Amber 1",
     "grantCall": "Follow-on Funding - I&E open",
     "description": "",
     "goal": "Industry, Innovation, and Infrastructure"
@@ -2731,7 +2731,7 @@
     "countryCode": "TV",
     "regionName": "Oceania, regional",
     "regionCode": 889,
-    "status": "Amber",
+    "status": "Amber 1",
     "grantCall": "Conflict Innovation 22/10/65",
     "description": "",
     "goal": "Sustainable Cities and Communities"
@@ -2748,7 +2748,7 @@
     "countryCode": "CF",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 1",
     "grantCall": "Conflict Innovation 22/10/60",
     "description": "",
     "goal": "Responsible Consumption and Production"
@@ -2850,7 +2850,7 @@
     "countryCode": "VA",
     "regionName": "Europe, regional",
     "regionCode": 89,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Conflict Innovation 22/10/327",
     "description": "",
     "goal": "Quality Education"
@@ -4108,7 +4108,7 @@
     "countryCode": "NI",
     "regionName": "North & Central America, regional",
     "regionCode": 389,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Conflict Innovation 22/10/130",
     "description": "",
     "goal": "Climate Action"
@@ -4125,7 +4125,7 @@
     "countryCode": "GW",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Research Networking (open call)",
     "description": "",
     "goal": "Partnerships for the Goals."
@@ -4159,7 +4159,7 @@
     "countryCode": "LS",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Research Networking (open call)",
     "description": "",
     "goal": "Decent Work and Economic Growth"
@@ -4193,7 +4193,7 @@
     "countryCode": "SA",
     "regionName": "Middle East, regional",
     "regionCode": 589,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Research Networking (open call)",
     "description": "",
     "goal": "Responsible Consumption and Production"
@@ -4210,7 +4210,7 @@
     "countryCode": "CM",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "PaCCS Large Grants 28/04/179",
     "description": "",
     "goal": "Reducing Inequality"
@@ -4227,7 +4227,7 @@
     "countryCode": "IT",
     "regionName": "Europe, regional",
     "regionCode": 89,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Research Networking (open call)",
     "description": "",
     "goal": "Good Health and Well-being"
@@ -4261,7 +4261,7 @@
     "countryCode": "MY",
     "regionName": "Far East Asia, regional",
     "regionCode": 789,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Conflict Innovation 22/10/81",
     "description": "",
     "goal": "Life Below Water"
@@ -4278,7 +4278,7 @@
     "countryCode": "MD",
     "regionName": "Europe, regional",
     "regionCode": 89,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Conflict Innovation 22/10/25",
     "description": "",
     "goal": "No Poverty"
@@ -4295,7 +4295,7 @@
     "countryCode": "ES",
     "regionName": "Europe, regional",
     "regionCode": 89,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Follow-on Funding - I&E open",
     "description": "",
     "goal": "Quality Education"
@@ -4312,7 +4312,7 @@
     "countryCode": "SC",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Research Networking (open call)",
     "description": "",
     "goal": "Gender Equality"
@@ -8562,7 +8562,7 @@
     "countryCode": "NI",
     "regionName": "North & Central America, regional",
     "regionCode": 389,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Conflict Innovation 22/10/199",
     "description": "",
     "goal": "Good Health and Well-being"
@@ -9718,7 +9718,7 @@
     "countryCode": "BY",
     "regionName": "Europe, regional",
     "regionCode": 89,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Conflict Innovation 22/10/93",
     "description": "sustainable health and well being",
     "goal": "Good Health and Well-being"
@@ -10466,7 +10466,7 @@
     "countryCode": "GQ",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Conflict Innovation 22/10/212",
     "description": "sustainable health and well being",
     "goal": "Climate Action"
@@ -12200,7 +12200,7 @@
     "countryCode": "WS",
     "regionName": "Oceania, regional",
     "regionCode": 889,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Research Networking (open call)",
     "description": "sustainable health and well being",
     "goal": "Climate Action"
@@ -12217,7 +12217,7 @@
     "countryCode": "KH",
     "regionName": "Far East Asia, regional",
     "regionCode": 789,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Research Grants (Open Call)",
     "description": "sustainable health and well being",
     "goal": "Partnerships for the Goals."
@@ -12234,7 +12234,7 @@
     "countryCode": "NU",
     "regionName": "Oceania, regional",
     "regionCode": 889,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "PaCCS Large Grants 28/04/205",
     "description": "sustainable health and well being",
     "goal": "Clean Water and Sanitation"
@@ -12251,7 +12251,7 @@
     "countryCode": "BR",
     "regionName": "South America, regional",
     "regionCode": 489,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "PaCCS Large Grants 28/04/287",
     "description": "sustainable health and well being",
     "goal": "Decent Work and Economic Growth"
@@ -12268,7 +12268,7 @@
     "countryCode": "WF",
     "regionName": "Oceania, regional",
     "regionCode": 889,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Conflict Innovation 22/10/115",
     "description": "sustainable health and well being",
     "goal": "Sustainable Cities and Communities"
@@ -12285,7 +12285,7 @@
     "countryCode": "BH",
     "regionName": "Middle East, regional",
     "regionCode": 589,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "PaCCS Large Grants 28/04/58",
     "description": "sustainable health and well being",
     "goal": "Responsible Consumption and Production"
@@ -12302,7 +12302,7 @@
     "countryCode": "JM",
     "regionName": "West Indies, regional",
     "regionCode": 380,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Conflict Innovation 22/10/324",
     "description": "sustainable health and well being",
     "goal": "Reducing Inequality"
@@ -12319,7 +12319,7 @@
     "countryCode": "LU",
     "regionName": "Europe, regional",
     "regionCode": 89,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Conflict Innovation 22/10/58",
     "description": "sustainable health and well being",
     "goal": "Good Health and Well-being"
@@ -12336,7 +12336,7 @@
     "countryCode": "KP",
     "regionName": "Asia, regional",
     "regionCode": 798,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Research Networking (open call)",
     "description": "sustainable health and well being",
     "goal": "Life On Land"
@@ -12353,7 +12353,7 @@
     "countryCode": "KE",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Research Networking (open call)",
     "description": "sustainable health and well being",
     "goal": "Life Below Water"
@@ -14682,7 +14682,7 @@
     "countryCode": "GH",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Research Networking (open call)",
     "description": "",
     "goal": "No Poverty"
@@ -14920,7 +14920,7 @@
     "countryCode": "GQ",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Conflict Innovation 22/10/57",
     "description": "",
     "goal": "Good Health and Well-being"
@@ -14954,7 +14954,7 @@
     "countryCode": "LK",
     "regionName": "South Asia, regional",
     "regionCode": 679,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Research Grants (Open Call)",
     "description": "",
     "goal": "Life Below Water"
@@ -15039,7 +15039,7 @@
     "countryCode": "OM",
     "regionName": "Middle East, regional",
     "regionCode": 589,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "Research Grants (Open Call)",
     "description": "",
     "goal": "Industry, Innovation, and Infrastructure"
@@ -15073,7 +15073,7 @@
     "countryCode": "SO",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 4",
     "grantCall": "PaCCS Large Grants 28/04/141",
     "description": "",
     "goal": "Zero Hunger"
@@ -15090,7 +15090,7 @@
     "countryCode": "AI",
     "regionName": "West Indies, regional",
     "regionCode": 380,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "PaCCS Large Grants 28/04/247",
     "description": "",
     "goal": "Climate Action"
@@ -15107,7 +15107,7 @@
     "countryCode": "SZ",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Research Networking (open call)",
     "description": "",
     "goal": "Partnerships for the Goals."
@@ -15124,7 +15124,7 @@
     "countryCode": "MZ",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Conflict Innovation 22/10/75",
     "description": "",
     "goal": "Clean Water and Sanitation"
@@ -15141,7 +15141,7 @@
     "countryCode": "DK",
     "regionName": "Europe, regional",
     "regionCode": 89,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Conflict Innovation 22/10/52",
     "description": "",
     "goal": "Decent Work and Economic Growth"
@@ -15158,7 +15158,7 @@
     "countryCode": "AD",
     "regionName": "Europe, regional",
     "regionCode": 89,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Conflict Innovation 22/10/303",
     "description": "",
     "goal": "Sustainable Cities and Communities"
@@ -17487,7 +17487,7 @@
     "countryCode": "GW",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 3",
     "grantCall": "Follow-on Funding - I&E open",
     "description": "",
     "goal": "Responsible Consumption and Production"
@@ -17895,7 +17895,7 @@
     "countryCode": "AM",
     "regionName": "Asia, regional",
     "regionCode": 798,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Conflict Innovation 22/10/342",
     "description": "",
     "goal": "Gender Equality"
@@ -17912,7 +17912,7 @@
     "countryCode": "TN",
     "regionName": "North of Sahara, regional",
     "regionCode": 189,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Conflict Innovation 22/10/92",
     "description": "",
     "goal": "Peace, Justice, and Strong Institutions"
@@ -18014,7 +18014,7 @@
     "countryCode": "KN",
     "regionName": "West Indies, regional",
     "regionCode": 380,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "PaCCS Large Grants 28/04/167",
     "description": "",
     "goal": "Clean Water and Sanitation"
@@ -19272,7 +19272,7 @@
     "countryCode": "SY",
     "regionName": "Middle East, regional",
     "regionCode": 589,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "PaCCS Large Grants 28/04/20",
     "description": "",
     "goal": "Life On Land"
@@ -19289,7 +19289,7 @@
     "countryCode": "SH",
     "regionName": "",
     "regionCode": "",
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Research Networking (open call)",
     "description": "",
     "goal": "Life Below Water"
@@ -19323,7 +19323,7 @@
     "countryCode": "TW",
     "regionName": "Far East Asia, regional",
     "regionCode": 789,
-    "status": "Amber",
+    "status": "Amber 2",
     "grantCall": "Follow-on Funding - I&E open",
     "description": "",
     "goal": "Quality Education"
@@ -19357,7 +19357,7 @@
     "countryCode": "CR",
     "regionName": "North & Central America, regional",
     "regionCode": 389,
-    "status": "Amber",
+    "status": "Amber 1",
     "grantCall": "Research Grants (Open Call)",
     "description": "",
     "goal": "Peace, Justice, and Strong Institutions"
@@ -19374,7 +19374,7 @@
     "countryCode": "GQ",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 1",
     "grantCall": "Conflict Innovation 22/10/261",
     "description": "",
     "goal": "Industry, Innovation, and Infrastructure"
@@ -19391,7 +19391,7 @@
     "countryCode": "GS",
     "regionName": "",
     "regionCode": "",
-    "status": "Amber",
+    "status": "Amber 1",
     "grantCall": "Conflict Innovation 22/10/191",
     "description": "",
     "goal": "Affordable and Clean Energy"
@@ -19425,7 +19425,7 @@
     "countryCode": "VI",
     "regionName": "West Indies, regional",
     "regionCode": 380,
-    "status": "Amber",
+    "status": "Amber 1",
     "grantCall": "Research Networking (open call)",
     "description": "",
     "goal": "Climate Action"
@@ -19442,7 +19442,7 @@
     "countryCode": "BW",
     "regionName": "South of Sahara, regional",
     "regionCode": 289,
-    "status": "Amber",
+    "status": "Amber 1",
     "grantCall": "Research Grants (Open Call)",
     "description": "",
     "goal": "Partnerships for the Goals."

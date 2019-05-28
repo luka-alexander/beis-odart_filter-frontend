@@ -13,23 +13,23 @@ const Report = () => {
         <div className="govuk-grid-row">
           <div className="govuk-grid-column-full">
             <h1 className="govuk-heading-xl">{BaseLocale.reportPageTitle}</h1>
-            <div className="govuk-caption-m">Relevant Quarter</div>
-            <div className="govuk-heading-m">2017-2018 Q3</div>
+            <div className="govuk-caption-m">{BaseLocale.reportCaptionHeader}</div>
+            <div className="govuk-heading-m">{BaseLocale.reportSubcaptionHeader}</div>
           </div>
           <div className="govuk-grid-column-one-third">
             <div className="panel-blue">
-              <div className="govuk-caption-m">Actual spend</div>
-              <div className="govuk-heading-l">£470,850</div>
+              <div className="govuk-caption-m">{BaseLocale.reportBlock1Header}</div>
+              <div className="govuk-heading-l">{BaseLocale.reportBlock1Content}</div>
             </div>
           </div>
           <div className="govuk-grid-column-one-third">
             <div className="panel-blue">
-              <div className="govuk-caption-m">Budget difference</div>
-              <div className="govuk-heading-l">-£67,950</div>
+              <div className="govuk-caption-m">{BaseLocale.reportBlock2Header}</div>
+              <div className="govuk-heading-l">{BaseLocale.reportBlock2Content}</div>
             </div>
           </div>
           <div className="govuk-grid-column-one-third">
-    
+     
           </div>
           <div className="govuk-grid-column-full">
             <LineChart />
