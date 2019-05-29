@@ -33,7 +33,7 @@ class Transparency extends Component {
           <div className="govuk-grid-row">
             <div className="govuk-grid-column-full">
               <p className="govuk-text">{BaseLocale.transparencyBodyContent}</p>
-              <a className="govuk-button" href="https://iati.cove.opendataservices.coop/media/9f3b5f30-9ea9-403f-936c-b6770bbf9af1/unflattened.xml" target="_blank" rel="noopener noreferrer">
+              <a className="govuk-button" href="https://iati.cove.opendataservices.coop/media/81ce4095-99c3-4540-8c07-e5e54933f899/unflattened.xml" target="_blank" rel="noopener noreferrer">
                 {BaseLocale.generateReport}
               </a>
             </div>
